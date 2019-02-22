@@ -12,5 +12,11 @@ public class Main {
 
         derDurchschnitt.berechneDurchschnitt();
         derDurchschnitt.druckeDurchschnitt();
+
+        // Übergabe von Parametern zwischen Klassen
+        derDurchschnitt.druckeText("Unser erster Parameter");
+
+        // Holen von Werten aus anderen Objekten
+        System
     }
 }

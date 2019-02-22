@@ -15,7 +15,15 @@ public class Durchschnitt {
     }
 
     void druckeDurchschnitt() {
-        System.out.printf("Der Durchschnitt der Klausur beträgt: %.1f", durchschnitt);
+        System.out.printf("Der Durchschnitt der Klausur beträgt: %.1f\n", durchschnitt);
+    }
+
+    void druckeText(String text) {
+        System.out.println(text);
+    }
+
+    String gebeText() {
+        return "Rückgabe 2";
     }
 }
 
