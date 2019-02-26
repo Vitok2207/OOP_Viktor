@@ -7,8 +7,8 @@ public class Account {
     // Kundennummer
     private int customerID;
 
-    // Konstruktor
-    public  Account(int accountID, int customerID) {
+    // InitAccount
+    public void initAccount(int accountID, int customerID) {
         this.accountID = accountID;
         this.customerID = customerID;
     }
@@ -17,9 +17,12 @@ public class Account {
     public int getAccountID() {
         return accountID;
     }
+
+    // Kontostand geben
     public int getBalance() {
         return balance;
     }
+
     public int getCustomerID() {
         return customerID;
     }
@@ -29,6 +32,7 @@ public class Account {
     public void withdraw(int amount) {
         balance -= amount;
     }
+
     // Einzahlen
     public void deposit(int amount) {
         balance += amount;
