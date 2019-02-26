@@ -7,6 +7,12 @@ public class Account {
     // Kundennummer
     private int customerID;
 
+    // Konstruktor
+    public  Account(int accountID, int customerID) {
+        this.accountID = accountID;
+        this.customerID = customerID;
+    }
+
     // Getter
     public int getAccountID() {
         return accountID;
