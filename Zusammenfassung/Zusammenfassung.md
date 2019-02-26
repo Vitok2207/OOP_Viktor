@@ -11,14 +11,14 @@ Datentyp Variablennamen = Wert; <br>
 int meineZahl = 5; <br>
 Analog dazu das Erstellen von Objekten. <br>
 Klassenname Objektname = new Klassenname(); <br>
-Durchschnitt derDurschnitt = new Durchschnitt(); 
+Durchschnitt derDurschnitt = new Durchschnitt();
 
 ### Definition von Methoden und Attributen
 #### Methoden - Was macht die Klasse / das Objekt?
 Funktioniert genau wie bisher, ein Unterschied ist zu beachten! <br>
 Das bisher voren angesetzte static fällt weg. <br>
 Methoden sind wie bisher mit und ohne Parametern sowie mit und ohne Rückgabetyp definierbar.
- 
+
 #### Attribute - Was weiß die Klasse / das Objekt?
 Funktioniert genau wie bisher, ein Unterschied ist zu beachten! <br>
 Das bisher voren angesetzte static fällt weg. <br>
@@ -43,4 +43,37 @@ String gebeText() { <br>
 Bei Aufruf der Methode haben wir die Möglichkeit den Rückgabewert aufzugreifen.
 System.out.println(derDurchschnitt.gebeText());
 
+# Tag 3
+## Sichtbarkeiten
+Werden verwendet, um den Zugriff auf Daten und Methoden zu beschränken.
+### private
+Alles was private deklariert ist, ist von außerhalb der Klasse NICHT sichtbar. <br>
+Wenn wir dennoch Zugriff wollen, müssen wir getter oder setter definieren. <br>
+Attribute (unsere Daten) deklariern wir IMMER als private.
 
+### public
+Alles was public deklariert ist, ist von außerhalb der Klasse SICHTBAR. <br>
+Methoden, die von außen (von anderen Objekten aus) nutzbar sein sollen, werden als public deklariert.
+
+### protected
+Wird noch ergänzt
+
+## Getter und Setter
+### Getter
+Wird verwendet, um ein privates Attribut auszulesen. <br>
+Gibt also den Wert des Attributs (der Daten) zurück.
+### Setter
+Wird verwendet, um ein privates Attribut zu verändern. <br>
+Speichert also einen neuen Wert im Attribut ab.
+
+## Konstruktor
+Wird genutzt, um Objekte zu erzeugen. <br>
+Kann genutzt werden, um Daten zu initialisieren. <br>
+MUSS public sein und MUSS immer wie die Klasse heißen.
+
+## Methodenaufruf mit Objektübergabe
+Wir können beim Aufruf von Methoden auch Objekte als Parameter übergeben. <br>
+Dadurch können wir Abläufe schreiben, die dann auf jedes Objekt, egal wie es heißt, anwendbar sind. <br>
+Wir sparen uns viel Schreibarbeit, zum Beispiel beim Ausgeben der Informationen über einen Kunden. <br>
+Dabei wird in der Parameterliste der Klassenname gefolgt von einem frei wählbaren Paramenternamen geschrieben. <br>
+private void printCustomerInfo(Customer customer) { ... }
