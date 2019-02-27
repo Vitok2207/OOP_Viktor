@@ -1,4 +1,5 @@
-
+// Importieren des Scanners
+import java.util.Scanner;
 
 public class Bank {
     // Attribute
@@ -17,9 +18,25 @@ public class Bank {
     Account account1 = new Account();
     Account account2 = new Account();
 
+    // Scanner
+    Scanner sc = new Scanner(System.in);
+
+    // Zustandsvariable
+    int state = 0;
+
+    // Zustände definieren
+    final int WELCOME = 0;  // Bank eröffnen
+    final int MENU = 1;     // Auswahlmenü, was soll gemacht werden?
+    final int NEWCUST = 2;  // Neuen Kunden anlegen
+    final int WITHDRAW = 3; // Geld abheben
+    final int DEPOSIT = 4;  // Geld einzahlen
+    final int TRANSFER = 5; // Geld überweisen
+    final int AGAIN = 6;    // Weiter Aktionen?
+    final int CLOSE = 7;    // Bank schließen
 
     // Methoden
     public void start() {
+/*
         System.out.println("Comcave Bank");
         newLine();
 
@@ -79,6 +96,53 @@ public class Bank {
 
         printCustomerInfo(customer2);
         printAccountInfo(account2);
+        newLine();
+    */
+
+        // Zustandsautomat
+        // Mögliche Zustände
+        // Eröffnen der Bank
+        // Erstellen eines neuen Kunden - Optional: Automatische Konten- und Kundennummernvergabe static als Hinweis
+        // Eingabe des Namens / der Kontonummer
+        // Auswahl der Optionen: Auszahlen, Einzahlen, Überweisen
+        // Nochmal?
+        // Programm beenden
+
+        while(state <= CLOSE) {
+            switch(state) {
+                case WELCOME:
+                    welcome();
+                    state = MENU;
+                    break;
+                case MENU:
+
+                    break;
+                case NEWCUST:
+
+                    break;
+                case WITHDRAW:
+
+                    break;
+                case DEPOSIT:
+
+                    break;
+                case TRANSFER:
+
+                    break;
+                case AGAIN:
+
+                    break;
+                case CLOSE:
+
+                    break;
+            }
+        }
+
+    }
+
+    private void welcome() {
+        System.out.println("Viki Bank");
+        System.out.println("Herzlich Willkommen!");
         newLine();
     }
 
