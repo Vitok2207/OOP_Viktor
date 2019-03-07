@@ -2,7 +2,7 @@ package Krankenhaus;
 
 import Krankenhaus.Aerzte.Chirurg;
 
-public class Arzt {
+public abstract class Arzt {
     // Attribute / Instanzvariablen
     protected boolean arbeitetImKrankenhaus;
     protected String vorName, nachName;
@@ -27,7 +27,12 @@ public class Arzt {
 
 
     // Methoden
-    public void patientBehandeln() {
+
+    public abstract void patientBehandeln();
+    public abstract void patientBehandeln(String name);
+    public abstract void patientBehandeln(int anzahl);
+
+/*    public void patientBehandeln() {
         System.out.println("Ich bin in einer Behandlung!");
     }
 
@@ -43,7 +48,7 @@ public class Arzt {
         System.out.println("Test rückgabe");
         return anzahl;
     }
-
+*/
     // Methoden schreiben:
     // schreibeRezept() - Ausgabe: Bitte Medikament und Dosierung angeben
     // schreibeRezept(String medikament) - Ausgabe: Bitte Dosierung angeben
@@ -55,6 +60,9 @@ public class Arzt {
     public void schreibeRezept(String medikament) {
         System.out.println("Bitte Dosierung angeben!");
     }
+
+    public abstract void patientBehandeln(String name);
+
     public void schreibeRezept(String medikament, String dosierung) {
         System.out.println("Sie bekommen das Medikament " + medikament +".");
         System.out.println("Bitte " + dosierung + " einnehmen!");
